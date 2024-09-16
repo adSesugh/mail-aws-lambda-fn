@@ -3,10 +3,6 @@ const Chromium = require("@sparticuz/chromium")
 const QRCode = require("qrcode")
 const nodemailer = require('nodemailer')
 
-const eventTitle = "KADAF 2.0";
-const profilePicUrl = "https://i.seadn.io/gae/Ihufw_BbfNUhFBD-XF74FlY2JjpYeUkkTdhzJy_bjEdfz0qKlLMOkxlUKxyJR7ib5dgsji9XZAMuorSX20Fw12q5XZ2LJTj2efcS?auto=format&dpr=1&w=1000";
-
-
 exports.handler = async (event, context, callback) => {
     try {
         const { to, subject, content, data } = event
@@ -221,7 +217,7 @@ async function generateNameTagHtml(data) {
                         </div>
                     </div>
                     <div class="speaker">
-                        <h4 class="">${data?.fullname}</h4>
+                        <h4 class="">${data?.fullName}</h4>
                     </div>
                     <div class="speaker-title">
                         <span>Participant</span>
